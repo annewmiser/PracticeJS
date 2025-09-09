@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Web app </title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="SetTime">
+        <h1 id="day" style="text-align: center; color:rgb(255, 255, 255);"></h1>
+        <div class="container_date">
+            <button id="Year"></button>
+            <button id="Month"></button>
+            <button id="Numday"></button>
+            <button id="Hours"></button>
+            <button id="Minutes"></button>
+            <button id="Seconds"></button>
+        </div>
+    </header>
+    <div class="container_main">
+        <div class="container_Pro">
+            <h1>JavaScript Comparison</h1>
+            <h2>The () ? : Ternary Operator</h2>
+            <input type="text" id="age" value="18">
+            <button onclick="Myfunction()">Try it</button>
+            <p id="demo"></p>
+        </div>
+        <div class="container_Pro">
+            <h1>โปรแกรมตัดเกรด</h1>
+            <p>กรูณาป้อนคะแนนของคุณ</p>
+            <input type="text" id="grand" value="55">
+            <button onclick="Mycalgrand()">Try it</button>
+            <p id="result"></p>
+        </div>
+        <div class="container_Pro">
+            <div class="container_flex">
+                <div>
+                    <h1>โปรแกรมคำนวนภาษี 7%</h1>
+                    <p>กรูณาป้อนราคา</p>
+                    <input type="text" id="monny" value="">
+                    <button onclick="Mycaltax()">Calculate</button>
+                    <p id="Sum"></p>
+                </div>
+                <div>
+                    <h1>โปรแกรมถอด VAT 7%</h1>
+                    <p>กรูณาป้อนราคารวม VAT</p>
+                    <input type="text" id="nonvat" value="">
+                    <button onclick="MynonVat()">Calculate</button>
+                    <p id="nonSum"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_Pro">
+            <h1>โปรแกรมเลขคู่เลขคี่</h1>
+            <p>กรูณาป้อนจำนวนเงิน</p>
+            <input type="text" id="Number" value="">
+            <button onclick="MyEvent_odd()">Trt it</button>
+            <p id="result_number"></p>
+        </div>
+        <div class="container_Pro">
+            <h1>โปรแกรมคำนวนค่าไฟฟ้า (kWh)</h1>
+            <p>กรูณาป้อนจำนวนปริมาณการไฟฟ้า</p>
+            <input type="text" id="Power" value="">
+            <button onclick="Mycal_Power()">Trt it</button>
+            <p id="result_Power"></p>
+        </div>
+        <div class="container_Pro">
+            <h1>โปรแกรมหาค่าตัวเลข MAX LOW</h1>
+            <p>กรอกตัวเลขโดยคั่นด้วยเครื่องหมายจุลภาค ( , )</p>
+            <input type="text" placeholder="ตัวอย่างเช่น 12,9,18,3" id="Number_ml" value="">
+            <button onclick="findNumber()">Trt it</button>
+            <p id="result_ml"></p>
+        </div>
+        <div class="container_Pro">
+            <h1>โปรแกรมแปลงตัวอักษรให้เป็นพิมพ์ใหญ่และค้นหา Palindrome</h1>
+            <p>กรุณากรอกตัวอักษรภาษาอังกฤษ</p>
+            <input type="text" id="text_uppercase" value="">
+            <button onclick="textUperCase()">Trt it</button>
+            <p id="result_textup"></p>
+            <p id="result_Palindrome" style="color: #000; opacity: 0.60;"></p>
+        </div>
+        <div class="container_Pro">
+            <h1>โปรแกรมทายตัวเลข 1- 100</h1>
+            <p>ทายเลย! 1 - 100</p>
+            <p><button onclick="Random_Number()">RandomNumber</button></p>
+            <p id="random_Number" hidden></p>
+            <input type="text" id="usercomming" value="">
+            <button onclick="check_Result()" class="send">Send</button>
+            <p id="result_random"></p>
+        </div>
+
+        <div class="container_Pro">
+            <h1>โปรแกรมกลับตัวอักษร</h1>
+            <p>กรุณากรอกตัวอักษร</p>
+            <input type="text" id="reversestring" value="" name="text">
+            <button onclick="reverseString()" class="send">Send</button>
+            <button class ="reset">Reset</button>
+            <p id="result_reverseString"></p>
+        </div>
+
+        <div class="container_Pro">
+            <h1>โปรแกรมแปลง String</h1>
+            <p>หาก String มีคำซ้ำ จะแปลงเป็น ")" หากไม่่ใช่คำซ้ำ "("</p>
+            <p>กรุณากรอกตัวอักษร</p>
+            <input type="text" id="word" value="">
+            <button onclick="duplicateEncode()" class="send">Send</button>
+            <button class ="reset">Reset</button>
+            <p id="result_duplicateEncode"></p>
+        </div>
+
+        <div class="container_Pro">
+            <h1>โปรแกรมแปลง Hashtag</h1>
+            <p>เราจะแปลง ตัวอักษรธรรมดาไม่เกิน 140 ตัว เป็น HashTag ให้คุณ</p>
+            <p>กรุณากรอกตัวอักษร</p>
+            <input type="text" id="hashtag" value="" placeholder="ตัวอย่าง:hollo world โหนกระแส ">
+            <button onclick="generateHashtag()" class="send">Send</button>
+            <button class ="reset">Reset</button>
+            <p id="resultHashTag"></p>
+        </div>
+
+        <div class="container_Pro">
+            <h1>โปรแกรมแปลง ตัวเลขให้เป็น เลขโรมัน</h1>
+            <p>[1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90 , "XC"], [50, "L"], [40, "XL"], [10, "X"], [5, "V"], [4, "IV"], [1, "I"]]</p>
+            <p>กรุณากรอกตัวเลข</p>
+            <input type="text" id="intToRoman" value="">
+            <button onclick="int_to_roman()" class="send">Send</button>
+            <button class ="reset">Reset</button>
+            <p id="result_roman"></p>
+        </div>
+
+        <div class="container_Pro">
+            <h1>โปรแกรมพีระมิดเบียร์</h1>
+            <p>กรอกจำนวนงบประมาณของคุณ</p>
+            <input type="text" name="" id="bonus">
+            <p>กรอกราคา เบียร์</p>
+            <p><input type="number" id="price" min="1" max="10"></p>
+            <button onclick="beeramid()" class="send">Send</button>
+            <button class="reset">Reset</button>
+            <p id="result_beer"></p>
+        </div>
+
+
+
+
+
+
+    </div>
+    <script src="/reset.js"></script>
+    <script src="/enter.js"></script>
+    <script src="/test.js"></script>
+
+</body>
+
+</html>
